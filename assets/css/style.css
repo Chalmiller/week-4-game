@@ -1,0 +1,21 @@
+img {
+	height: 200px;
+	width: 200px;
+}
+button {
+	height: 200px;
+	width: 200px;
+	display: inline-block;
+	margin-left: auto;
+	margin-right: auto;
+
+}
+body {
+	background: url("../../the_eternal.jpg");
+}
+h1 {
+	text-align: center;
+}
+h4 {
+	text-align: center;
+}
