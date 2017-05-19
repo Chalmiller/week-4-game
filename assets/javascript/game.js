@@ -23,83 +23,45 @@ $( document ).ready(function() {
     $("#current_value").html(randNumber);
   };
 
+  function conditionals() {
+    if (total === currentValue ) {
+        $('#winOrLose').html("You Win!");
+        resetValues();
+        wins += 1;
+        $('#wins').html(wins);
+      } 
+      if (total > currentValue) {
+        $('#winOrLose').html("Sorry, You Lose!");
+        resetValues();
+        losses += 1
+        $('#losses').html(losses);
+      }
+      else {
+        $('#total_score').html(total);
+      }
+    };
+
   if (total < currentValue) {
     console.log(currentValue)
     $('#winOrLose').html("Keep Trying!");
     $("#image_1").click(function() {
       total += imageOneValue;
-      if (total === currentValue ) {
-        $('#winOrLose').html("You Win!");
-        wins += 1;
-        $('#wins').html(wins);
-        resetValues();
-      } 
-      if (total > currentValue) {
-        $('#winOrLose').html("Sorry, You Lose!");
-        resetValues();
-        losses += 1
-        $('#losses').html(losses);
-      }
-      else {
-        $('#total_score').html(total);
-      }
+      conditionals();
     });
 
     $("#image_2").click(function() {
       total += imageTwoValue;
-      if (total === currentValue ) {
-        $('#winOrLose').html("You Win!");
-        resetValues();
-        wins += 1;
-        $('#wins').html(wins);
-      } 
-      if (total > currentValue) {
-        $('#winOrLose').html("Sorry, You Lose!");
-        resetValues();
-        losses += 1
-        $('#losses').html(losses);
-      }
-      else {
-        $('#total_score').html(total);
-      }
+      conditionals();
     });
 
     $("#image_3").click(function() {
       total += imageThreeValue;
-      if (total === currentValue ) {
-        $('#winOrLose').html("You Win!");
-        resetValues();
-        wins += 1;
-        $('#wins').html(wins);
-      } 
-      if (total > currentValue) {
-        $('#winOrLose').html("Sorry, You Lose!");
-        resetValues();
-        losses += 1
-        $('#losses').html(losses);
-      }
-      else {
-        $('#total_score').html(total);
-      }
+      conditionals();
     });
 
     $("#image_4").click(function() {
       total += imageFourValue;
-      if (total === currentValue ) {
-        $('#winOrLose').html("You Win!");
-        resetValues();
-        wins += 1;
-        $('#wins').html(wins);
-      } 
-      if (total > currentValue) {
-        $('#winOrLose').html("Sorry, You Lose!");
-        resetValues();
-        losses += 1
-        $('#losses').html(losses);
-      }
-      else {
-        $('#total_score').html(total);
-      }
+      conditionals();
     });
   };
 });            
